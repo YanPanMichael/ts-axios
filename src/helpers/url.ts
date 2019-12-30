@@ -3,6 +3,18 @@ export function buildURL(url:string, params?:any): string {
   const parts: string[] = [];
   Object.keys(params).forEach((key) => {
     let val = params[key];
-    
+    if(val === null || typeof val === 'undefined') {
+      return
+    }
+    let values = []
+    if(Array.isArray(val)) {
+      values = val;
+      key += '[]'
+    } else {
+      values = [val]
+    }
+    values.forEach(val => {
+      
+    });
   })
 }
