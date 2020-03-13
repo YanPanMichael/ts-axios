@@ -11,3 +11,7 @@ export function isObject(val: any): val is Object {
 export function isFunction(val: any): val is Function {
   return typeof val === 'function'
 }
+
+export function isPlainObject(val: any): val is Object {
+  return toString.call(val) === '[object Object]'
+}
